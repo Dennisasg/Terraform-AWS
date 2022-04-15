@@ -6,18 +6,20 @@ resource "aws_s3_bucket" "my-bucket-dennis-gusmao" {
     Name        = "Bucket-Terraform"
     Environment = "Dev"
     ManagedBy   = "Terraform"
+    Owner       = "Dennis Gusmão"
+    UpdatedAt   = "2022-04-15"
   }
 }
 
-resource "aws_s3_bucket" "my-bucket-dev" {
-  bucket = "bucket-dev-dennis"
-  acl    = "private"
+resource "aws_s3_bucket" "my-bucket-dev-dennis-gusmao" {
+  bucket = "bucket-de-dev-dennis-gusmao"
+  acl = "private"
 
   tags = {
-    Name        = "Bucket de Dev"
+    Name = "Bucket-Terraform-DEV"
     Environment = "Dev"
-    ManagedBy   = "Terraform-Dev"
-    Owner       = "Dennis Gusmão"
-    UpdatedAt   = "2022-04-15"
+    ManagedBy = "Terraform"
+    Owner = "Dennis"
+    UpdatedAt = "2022-04-15"
   }
 }

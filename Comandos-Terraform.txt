@@ -9,5 +9,6 @@ terraform init
 terraform plan
 terraform plan -out="tfplan.out" -> flag
 terraform apply
+terraform apply tfplan.out -> flag
 terraform validate
 terraform fmt
