@@ -4,7 +4,13 @@
 # .tfstate files
 *.tfstate
 *.tfstate.*
-
+*.dll
+*.exe
+.DS_Store
+example.tf
+terraform.tfplan
+terraform.tfstate
+.terraform/
 # Crash log files
 crash.log
 

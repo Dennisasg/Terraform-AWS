@@ -1,6 +1,6 @@
 resource "aws_s3_bucket" "my-bucket-dennis-gusmao" {
   bucket = "my-bucket-dennis-gusmao"
-  acl = "provate"
+  acl = "private"
 
   tags = {
     Name = "Bucket-Terraform"
