@@ -28,11 +28,11 @@ variable "instance_tags" {
   }
 }
 
-variable "instance_tags-DEV" {
-  type        = map(string)
+variable "instacne_tags-DEV" {
+  type = map(string)
   description = ""
-  default = {
-    Name    = "Ubuntu-Dev"
-    Project = "Terraform-AWS"
+  default ={
+    Name = "Ubuntu-Server-DEV"
+    Project ="Terraform-AWS"
   }
 }
