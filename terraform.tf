@@ -12,9 +12,31 @@ terraform {
       version = "3.1.2"
     }
   }
+  #não se usa variaveis no bloco de core = núcleo que é o terraform"
+  backend "s3" {
+    bucket  = "tfstate-587202995159"
+    key     = "tfstates/dev"
+    region  = "us-east-1"
+    profile = "default"
+  }
 }
 provider "aws" {
   region  = var.aws_region
   profile = var.aws_profile
 
+}
+data "aws_caller_identity" "current" {}
+
+resource "aws_s3_bucket" "remote-state" {
+  bucket = "tfstate-${data.aws_caller_identity.current.account_id}"
+  versioning {
+    enabled = true
+  }
+
+  tags = {
+    Description = "Stores terraform remote state files"
+    ManagedBy   = "Terraform"
+    Owner       = "Dennis Gusmão"
+    CreatedAt   = "2022-04-16"
+  }
 }

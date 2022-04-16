@@ -13,3 +13,7 @@ output "aws_instance_DEV_Ip-Private" {
 output "aws_instance_DEV_Ip-Public" {
   value = aws_instance.Ubuntu-Server-DEV.public_ip
 }
+
+output "remote_state_bucket" {
+  value = aws_s3_bucket.remote-state.bucket
+}
