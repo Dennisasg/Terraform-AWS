@@ -6,6 +6,7 @@ export AWS_SECRET_KEY=
 
 Comandos:
 terraform init
+terraform init -upgrade
 terraform plan
 terraform plan -out="tfplan.out" -> flag
 terraform plan -var="aws_profile=profileaws"
