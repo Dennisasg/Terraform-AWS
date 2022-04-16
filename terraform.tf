@@ -14,10 +14,7 @@ terraform {
   }
   #não se usa variaveis no bloco de core = núcleo que é o terraform"
   backend "s3" {
-    bucket  = "tfstate-587202995159"
-    key     = "tfstates/dev"
-    region  = "us-east-1"
-    profile = "default"
+#rodar terraform init -backend=true -backend-config="backend.hcl"
   }
 }
 provider "aws" {

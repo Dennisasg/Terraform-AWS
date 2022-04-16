@@ -7,6 +7,9 @@ export AWS_SECRET_KEY=
 Comandos:
 terraform init
 terraform init -upgrade
+USANDO BACKEND:
+terraform init -backend=true -backend-config="name-da-bucket" -backend-config="
+nema-do-folder" -backend-config="region=us-east-1" -backend-config="profile=default"
 terraform plan
 terraform plan -out="tfplan.out" -> flag
 terraform plan -var="aws_profile=profileaws"
