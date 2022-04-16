@@ -17,3 +17,9 @@ terraform apply tfplan.out -> flag
 terraform applu -auto-approve
 terraform validate
 terraform fmt
+terraform show
+terraform console
+> nome_do_recurso.this
+> nome_do_recurso.objeto.expecifico
+> exit
+
