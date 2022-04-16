@@ -25,10 +25,10 @@ variable "aws_type" {
 }
 
 variable "instance_tags-dev" {
-  type = map(string)
+  type        = map(string)
   description = ""
   default = {
-    Name = "Ubuntu-Dev"
+    Name    = "Ubuntu-Dev"
     Project = "Terraform-AWS"
   }
 }
